@@ -1,25 +1,51 @@
 <script setup>
-import {ref} from 'vue';
+import { ref } from 'vue';
 </script>
 <template>
   <main>
+    <div class="overlayer">
+      <div class="model">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>add note</button>
+      </div>
 
+    </div>
     <div class="container">
       <header>
         <h1>Notes</h1>
         <button>+</button>
       </header>
-        <div class="card-continer">
-          <div class="card">
-            <p>text</p>
-            <p class="date">date</p>
-          </div>
+      <div class="card-continer">
+        <div class="card">
+          <p>text</p>
+          <p class="date">date</p>
         </div>
-      
+      </div>
+
     </div>
   </main>
 </template>
 <style scoped>
+.model{
+  width: 750px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.overlayer {
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.77);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 main {
 
   width: 100vw;
@@ -32,7 +58,8 @@ main {
   margin: 0 auto;
 
 }
-.date{
+
+.date {
   font-size: 12.5px;
   font-weight: bold;
 }
@@ -42,13 +69,14 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.card-continer{
-  margin:25px;
-display: flex;
-flex-wrap: wrap;
+
+.card-continer {
+  margin: 25px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.card{
+.card {
   height: 26vh;
   width: 10vw;
   display: flex;
@@ -57,19 +85,19 @@ flex-wrap: wrap;
   margin-left: 25px;
   margin-bottom: 25px;
   padding: 10px;
-  border-radius:10px;
+  border-radius: 10px;
   background-color: aqua;
 }
+
 header button {
   /* margin-left:45vw; */
-    border: none;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background-color: rgb(21,20,20);
-    border-radius: 100%;
-    color: white;
-    font-size: 20px;
-  }
-</style>
+  border: none;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(21, 20, 20);
+  border-radius: 100%;
+  color: white;
+  font-size: 20px;
+}</style>
